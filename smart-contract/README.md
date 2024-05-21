@@ -1,4 +1,4 @@
-# ton-demo
+# Smart Contract
 
 ## Project structure
 
