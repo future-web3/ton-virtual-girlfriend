@@ -1,0 +1,52 @@
+generator db {
+  provider  = "prisma-client-py"
+  interface = "sync"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                Int        @id @default(autoincrement())
+  phoneNumber       String?    @unique
+  username          String?    @unique
+  password          String?
+  createdAt         DateTime   @default(now())
+  currentTokenCount Int        @default(0)
+  validUntil        DateTime?
+  tierStatus        Json       @default("{\"tier\": \"Free\", \"tokenLimit\": 5000}")
+  region            String     @default("global")
+  Messages          Messages[]
+  sentMessages      Messages[] @relation("UserSentMessages")
+  receivedMessages  Messages[] @relation("UserReceivedMessages")
+  platform          String     @default("app")
+  walletAddress     String
+  Order             Order[]
+}
+
+model Messages {
+  id         Int      @id @default(autoincrement())
+  content    String
+  createdAt  DateTime @default(now())
+  fromUser   User?    @relation("UserSentMessages", fields: [fromUserId], references: [id])
+  toUser     User?    @relation("UserReceivedMessages", fields: [toUserId], references: [id])
+  fromUserId Int?     @map("fromUser")
+  toUserId   Int?     @map("toUser")
+  User       User?    @relation(fields: [userId], references: [id])
+  userId     Int?
+  isUser     Boolean
+}
+
+model Order {
+  id          Int      @id @default(autoincrement())
+  fromAddress String
+  boc         String   @unique
+  sendAmount  String
+  status      String   @default("pending")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+  User        User     @relation(fields: [userId], references: [id])
+  userId      Int
+}

@@ -1,0 +1,115 @@
+.appContainer {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+.canvasContainer {
+  height: 80vh;
+  max-height: 100vh;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#live2dCanvas {
+  height: 60vh;
+}
+
+.buttonsContainer {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.inputContainer {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.messageInput {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 250px;
+}
+
+.sendBtn {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+.switchSectionContainer {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.switchLabel {
+  background: #e0f2ff;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.models {
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+}
+
+.switchBtn {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.chatBox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 70px;
+  width: 300px;
+  min-height: 60px;
+  color: #555;
+  font-size: 16px;
+  padding: 20px;
+  background: #e0f2ff;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.content {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.chatBox:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0f2ff;
+}

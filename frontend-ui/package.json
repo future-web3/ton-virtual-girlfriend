@@ -1,0 +1,47 @@
+{
+  "name": "ton-virtual-model",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.10.1",
+    "@headlessui/react": "^1.7.19",
+    "@orbs-network/ton-access": "^2.3.3",
+    "@tma.js/sdk": "^1.5.1",
+    "@tma.js/sdk-react": "^2.0.1",
+    "@tonconnect/ui-react": "^2.0.0",
+    "axios": "^1.6.8",
+    "classnames": "^2.5.1",
+    "eruda": "^3.0.1",
+    "framer-motion": "^11.0.28",
+    "next": "14.2.0",
+    "numeral": "^2.0.6",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.2.1",
+    "react-spinners": "^0.13.8",
+    "react-toastify": "^10.0.5",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@ton/core": "^0.56.3",
+    "@ton/crypto": "^3.2.0",
+    "@ton/ton": "^13.11.1",
+    "@types/node": "^20",
+    "@types/numeral": "^2.0.5",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.0",
+    "postcss": "^8",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}

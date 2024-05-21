@@ -1,0 +1,40 @@
+.voiceBtn {
+  @apply cursor-pointer
+  outline-none
+  rounded-full
+  w-[100px]
+  h-[100px]
+  flex
+  relative
+  items-center
+  justify-center;
+}
+
+.recording {
+  @apply bg-[#ff4081]
+  text-white;
+  transition: all 0.1s ease-out;
+}
+
+.wave {
+  @apply absolute
+  w-0
+  rounded-full
+  h-0;
+  background-color: rgba(255, 64, 129, 0.3);
+  animation: waveAnimation 1.5s linear infinite;
+}
+
+@keyframes waveAnimation {
+  from {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+  }
+
+  to {
+    width: 180px;
+    height: 180px;
+    opacity: 0;
+  }
+}

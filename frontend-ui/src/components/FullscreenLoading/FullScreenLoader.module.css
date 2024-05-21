@@ -1,0 +1,15 @@
+.loadingContainer {
+  @apply fixed
+  left-0
+  bg-gray-100
+  opacity-80
+  right-0
+  top-0
+  bottom-0
+  w-full
+  h-full
+  flex
+  items-center
+  justify-center
+  z-[1000];
+}
